@@ -14,4 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const type of ['chrome', 'node', 'electron']) {
     replaceText(`${type}-version`, process.versions[type])
   }
+
+  require('electron').ipcRenderer.invoke('ping').then(version => replaceText('app-version', version))
 })

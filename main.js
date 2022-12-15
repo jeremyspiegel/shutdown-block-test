@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
+const { autoUpdater } = require("electron-updater")
 
 function createWindow () {
   // Create the browser window.
@@ -25,6 +26,8 @@ function createWindow () {
 app.whenReady().then(() => {
   createWindow()
 
+  autoUpdater.checkForUpdatesAndNotify()
+
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
@@ -41,3 +44,5 @@ app.on('window-all-closed', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+ipcMain.handle('ping', () => app.getVersion())
