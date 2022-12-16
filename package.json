@@ -1,6 +1,6 @@
 {
   "name": "shutdown-block-test",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -18,13 +18,18 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^22.0.0",
-    "electron-builder": "^23.6.0"
+    "electron-builder": "23.0.3"
   },
   "build": {
-    "publish": [{
+    "publish": [
+      {
         "provider": "github",
         "owner": "jeremyspiegel",
         "repo": "shutdown-block-test"
-    }]
-}
+      }
+    ]
+  },
+  "dependencies": {
+    "electron-updater": "5.0.1"
+  }
 }
