@@ -1,6 +1,6 @@
 {
   "name": "shutdown-block-test",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
