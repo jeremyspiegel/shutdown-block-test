@@ -1,6 +1,6 @@
 {
   "name": "shutdown-block-test",
-  "version": "1.0.58",
+  "version": "1.0.59",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -8,7 +8,7 @@
   "repository": "https://github.com/jeremyspiegel/shutdown-block-test",
   "devDependencies": {
     "electron": "^22.0.0",
-    "electron-builder": "23.0.3"
+    "electron-builder": "23.6.0"
   },
   "license": "CC0-1.0",
   "build": {
@@ -21,6 +21,6 @@
     ]
   },
   "dependencies": {
-    "electron-updater": "5.0.1"
+    "electron-updater": "5.3.0"
   }
 }
